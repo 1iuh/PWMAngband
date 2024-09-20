@@ -78,10 +78,10 @@ static void init_stuff(void)
         my_strcat(libpath, PATH_SEP, sizeof(libpath));
     if (!suffix(datapath, PATH_SEP))
         my_strcat(datapath, PATH_SEP, sizeof(datapath));
-
+    
     /* Initialize */
+    printf("=========> %s <========================\n", configpath);
     init_file_paths(configpath, libpath, datapath);
-
     /* Create any missing directories */
     create_needed_dirs();
 }
